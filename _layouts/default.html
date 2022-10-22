@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="h-full">
 
-  {% include head.html %}
+{%- include head.html -%}
 
-  <body>
-    {{ content }}
+<body class='h-full'>
 
-    {% include footer.html %}
+  {%- include nav.html -%}
 
-    <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-    <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
-    
-  </body>
+  {{ content }}
+
+  {%- include footer.html -%}
+
+</body>
+
 </html>
