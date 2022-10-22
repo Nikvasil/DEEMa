@@ -2,62 +2,49 @@
 layout: default
 ---
 
-{% include header.html %}
 
-{% assign page_category = site.data.category_list[page.category] %}
+<article class="font-sans relative py-24 md:py-28 bg-white overflow-hidden" itemscope itemtype="http://schema.org/BlogPosting">
 
-
-<div class="container-full">
-    <div class="container grid-xl">
-      <div class="mt-12 show-md"></div>
-      <div class="mt-8"></div>
-      <div class="columns negative-m-xl">
-        <div class="column col-12">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="{{ site.url }}{{ site.baseurl }}">Help Center Home</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="../{{ page.category }}">{{ page_category.name }}</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#">{{ page.title }}</a>
-            </li>
-          </ul>
-          <h2 class="text-light text-bold">{{ page.title }}</h2>
-          <p class="text-light mb-0">{{ page.short-description }}</p>
-        </div>
-        <div class="column col-12">
-          <div class="card">
-            <div class="card-body">
-                {% if site.use_authors == true %}
-                {% assign post_author = site.data.authors[page.author] %}
-                <div class="flex-vertical-center mb-4">
-                  <figure class="avatar d-inline-block" style="align-items: center;">
-                    <img  src="../assets/{{ post_author.image }}" alt="...">
-                  </figure>
-                  <div class="ml-2">
-                    <p class="text-dark text-small mb-0">Written by <span class="text-primary">{{ post_author.name }}</span></p>
-                    <p class="text-dark text-small text-italic mb-0">{% include reading-time.html %}</p>
-                  </div>
-                </div>
-                {% else %}
-                <div class="ml-2">
-                    <p class="m-0 text-small">Last updated:</p>
-                    <p class="text-dark text-small text-italic mb-0">{{ page.last_modified_at | date: '%B %d, %Y'  }} - {% include reading-time.html %}</p>
-                  </div>
-                {% endif %}
-
-              {{ content }}
-
-              
-            
-
-
-            </div>
-          </div>
-        </div>
-        {% include more-help.html %}
-      </div>
+  <header class="relative px-4 sm:px-6 lg:px-8">
+    <div class="text-lg max-w-prose mx-auto mb-4">
+      <h1
+        class="mt-2 mb-2 text-3xl text-center-DIS leading-8 font-extrabold tracking-tight-DIS text-gray-800 sm:text-4xl sm:leading-10"
+        itemprop="name headline">
+        {{ page.title | escape }}</h1>
     </div>
+    <p class="max-w-prose mx-auto mb-2 text-lg uppercase text-gray-500"><span class="font-bold tracking-wide">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time class="dt-published text-xs" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+      ~
+      {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+      <time class="dt-modified text-sm" datetime="{{ mdate }}" itemprop="dateModified">
+        {{ mdate | date: date_format }}
+      </time>
+      {%- endif -%}
+      {%- if page.author -%}
+      • {% for author in page.author %}
+      <span itemprop="author text-sm" itemscope itemtype="http://schema.org/Person">
+        <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+      {%- if forloop.last == false %}, {% endif -%}
+      {% endfor %}
+      {%- endif -%}
+    </span></p>
+    <!-- 
+      Please sign up at https://www.soopr.co to personalize share and reaction buttons
+    -->
+    <div class="max-w-prose text-lg mx-auto mt-4 mb-8 soopr-btn soopr-btn-def" style="min-height: 36px;"></div>
+  </header>
+
+  <div class="prose prose-lg px-4 md:px-0 text-gray-700 mx-auto" itemprop="articleBody">
+    {{ content }}
   </div>
+
+  {%- if site.disqus.shortname -%}
+  {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

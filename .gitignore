@@ -1,7 +1,7 @@
-_site
-.sass-cache
+*.gem
+.bundle
 .jekyll-cache
-.jekyll-metadata
-vendor
-Odin.ai
-.idea
+.sass-cache
+_site
+Gemfile.lock
+node_modules
