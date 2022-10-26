@@ -3,5 +3,5 @@ layout: page
 title: Contact Us
 permalink: /contact-us/
 ---
+{%- include contact-us.html -%}
 
-Contact Us on abdrazakowa@gmail.com
