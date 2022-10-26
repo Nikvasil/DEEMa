@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Cookie
+permalink: /about/
 ---
 
 Cookie is a landing page site using [Tailwind CSS](https://www.tailwindcss.com/). You can learn more about customizing the site in `README.md` file in root directory of the project. You can learn more about Jekyll  at [jekyllrb.com](https://jekyllrb.com/)
