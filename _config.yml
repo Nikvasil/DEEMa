@@ -14,7 +14,7 @@ plugins:
   - jekyll-minifier
 
 css_dir: "assets/css" # defaults to "css"
-
+incremental: true
 highlighter: rouge
 
 collections:
