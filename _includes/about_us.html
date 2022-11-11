@@ -1,52 +1,60 @@
 <style>
 .container {
-    width:600px;
+    width:620px;
     height:600px;
-    padding:20px;
+    padding-top:30px;
+    padding-right:20px;
+    padding-left: 20px;
+    display: flex;
 }
 #goal{
     float:left;
-    width:180px;
-    hegiht:400px;
+    width:160px;
+    height:400px;
     background-color:white;
     border:solid lightgrey;
 }
 #mission{
     float:left;
-    width:180px;
-    hegiht:400px;
+    width:160px;
+    height:400px;
     background-color:white;
     border:solid lightgrey;
-    margin-left:50px;
+    margin-left:25px;
 }
 #vision{
     float:right;
-    width:180px;
-    hegiht:400px;
+    width:160px;
+    height:400px;
     background-color:white;
     border:solid lightgrey;
-    margin-left:50px;
+
 
 }
 </style>
 
 <section class="relative py-20 ">
 
-    <div class="container mx-auto px-4">
         <div class="items-center flex flex-wrap">
 
 
-                <h1 class="text-3xl mb-2 font-semibold leading-normal ">
-                    About Us
-                </h1>
-                <p
-                        class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-                >
+               <h2 class="text-4xl font-semibold text-black">About Us</h2>
+            </br>
+                <p class="text-lg leading-relaxed m-4 text-gray-600">
                     Working with us is a pleasure
                 </p>
                 <div class="container">
+                    <div id="mission">
+ <img src="./assets/img/mission.png"style="width:160px; height:220px;">
+                    <h2 float="left" color="black">Our Mission </h2>
+                    </br>
+                    <p float="left" color="light grey">
+                       To accompany the Client in the field of data management and provide a reliable and trusted way to manage the data.
+                    </p>
+
+                </div>
                 <div id="goal">
-                    <img src="./assets/img/goal.png"style="width:180px; height:220px;">
+                    <img src="./assets/img/goal.png"style="width:160px; height:220px;">
                     <h2 float="left" color="black">Our Purpose </h2>
                     </br>
                     <p float="left" color="light grey">
@@ -55,17 +63,8 @@
 
 
                 </div>
-                   <div id="mission">
- <img src="./assets/img/mission.png"style="width:180px; height:220px;">
-                    <h2 float="left" color="black">Our Mission </h2>
-                    </br>
-                    <p float="left" color="light grey">
-                       To accompany the Client in the field of data management and provide a reliable and trusted way to manage the data.
-                    </p>
-
-                </div>
                  <div id="vision">
- <img src="./assets/img/vision.png"style="width:180px; height:220px;">
+ <img src="./assets/img/vision.png"style="width:160px; height:220px;">
                     <h2 float="left" color="black">Our Vision </h2>
                     </br>
                     <p float="left" color="light grey">
@@ -79,6 +78,6 @@
 
 
 
-        </div>
+
     </div>
 </section>
