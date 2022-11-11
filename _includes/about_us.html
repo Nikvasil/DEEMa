@@ -1,11 +1,13 @@
 <style>
 .column {
 	 /* flex: 33.33%;*/
-      width:320px;
+      width:300px;
 	  height: 400px;
 	  padding: 10px;
-	  margin: 20px;
-    border:solid lightgrey;
+	  /*margin: 20px;*/
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+
 	  /*background-color: #cccccc;*/
 
 	/*  text-align: center;*/
@@ -14,7 +16,7 @@
 	.about {
 	   display: flex;
         flex-wrap: wrap;
-        margin: auto;
+        justify-content: center;
 	}
     .about p{
   color:lightgrey;
@@ -25,6 +27,7 @@
   color: black;
 font-weight: bold;
     font-family: Garamond, serif;
+    font-size: larger;
 }
 </style>
 
@@ -41,8 +44,8 @@ font-weight: bold;
 </div>
             </div>
     <div class="about">
-                    <div class="column">
- <img src="./assets/img/mission.png"style="width:300px; height:220px;">
+                    <div class="column" >
+ <img src="./assets/img/mission.png"style="width:300px; height:220px;padding-bottom: 10px;">
                     <h3 float="left" color="black">Our Mission </h3>
                     </br>
                     <p float="left" color="light grey" >
@@ -50,8 +53,8 @@ font-weight: bold;
                     </p>
 
                 </div>
-                <div class="column">
-                    <img src="./assets/img/goal.png"style="width:300px; height:220px;">
+                <div class="column" style="margin-left: 20px; margin-right: 20px;">
+                    <img src="./assets/img/goal.png"style="width:300px; height:220px;padding-bottom: 10px;">
                     <h3 float="left" color="black">Our Purpose </h3>
                     </br>
                     <p float="left" color="light grey">
@@ -61,7 +64,7 @@ font-weight: bold;
 
                 </div>
                  <div class="column">
- <img src="./assets/img/vision.png"style="width:300px; height:220px;">
+ <img src="./assets/img/vision.png"style="width:300px; height:220px;padding-bottom: 10px;">
                     <h3 float="left" color="black">Our Vision </h3>
                     </br>
                     <p float="left" color="light grey">
