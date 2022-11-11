@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.highlight .bsbc1 { background-color: #363636 }
+.highlight .txtsec { background-color: #DADADA; color: #737373 }
+.highlight .txtprim { background-color: #FFFFFF; color: #000000 }
+.highlight .bsbc2 { background-color: #FFFFFF }
 
 .highlight .hll { background-color: #515151 }
 .highlight  { background: #2d2d2d; color: #f2f0ec }
