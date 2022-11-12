@@ -47,6 +47,8 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
+
+        window.location.href = window.location.href.split('#')[0]  + e.currentTarget.hash;
     });
 });
 
