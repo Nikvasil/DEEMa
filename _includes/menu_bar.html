@@ -15,30 +15,30 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
         >
           <ul id="menu" class="flex flex-col lg:flex-row list-none lg:ml-auto text-gray-deem">
             <li class="flex items-center px-2">
-              <a href="#about_us" onclick="naviagation(this)">About us</a>
+              <a href="#about_us">About us</a>
             </li>
             <li class="flex items-center px-2">
-              <a href="#our_values" onclick="naviagation(this)">Our values</a>              
+              <a href="#our_values">Our values</a>              
             </li>
             <li class="flex items-center px-2">
-              <a href="#our_services" onclick="naviagation(this)">Our services</a>
+              <a href="#our_services">Our services</a>
             </li>
             <li class="flex items-center px-2">
-              <a href="#our_team" onclick="naviagation(this)">Our team</a>              
+              <a href="#our_team">Our team</a>              
             </li>
             <li class="flex items-center px-2">
-              <a href="#team_skills" onclick="naviagation(this)">Team skills</a>
+              <a href="#team_skills">Team skills</a>
             </li>
             <li class="flex items-center px-2">
-              <a href="#contact_us" onclick="naviagation(this)">Contact us</a>
+              <a href="#contact_us">Contact us</a>
             </li>
           </ul>
         </div>
   </div>
 </nav>
 
-<script>
- window.onload = function() {
+<script>  
+  window.onload = function() {
   /// add smoothing scroll animation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -47,8 +47,6 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
-
-        window.location.href = window.location.href.split('#')[0]  + e.currentTarget.hash;
     });
 });
 
@@ -63,14 +61,4 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
   }
  }
 
- /// highlight and de-highlight elements on navigation
- function naviagation(currentItem){
-  const list = document.getElementById("menu");
-  for(let i = 0; i < list.children.length; i++){
-    list.children[i].children[0].style.color = "inherit";
-    list.children[i].children[0].style.fontWeight = "inherit";
-  }
-  currentItem.style.color = "white";
-  currentItem.style.fontWeight = "bold";
- }
 </script>
