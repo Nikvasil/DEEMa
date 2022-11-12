@@ -43,8 +43,7 @@
   if(pathBits.length > 1 & pathBits[1] != "") {
     let element = document.querySelectorAll(`a[href='#${pathBits[1]}']`)[0];
     if(element != null && element != undefined) {
-      element.style.color = "white";
-      element.style.fontWeight = "bold";
+      element.classList.add('links');
     }
   }
  }

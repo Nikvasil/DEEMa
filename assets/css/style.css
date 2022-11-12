@@ -94,3 +94,12 @@
     color: #FFFFFF;
     font-size: 60px;
 }
+
+a[href^="#"]:hover {
+    color: #FFFFFF;
+}
+
+.links {
+    color: #FFFFFF;
+    font-weight: bold;
+}

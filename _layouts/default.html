@@ -35,12 +35,10 @@
  function naviagation(currentItem){
   const list = document.getElementById("menu");
   for(let i = 0; i < list.children.length; i++){
-    list.children[i].children[0].style.color = "inherit";
-    list.children[i].children[0].style.fontWeight = "inherit";
+    list.children[i].children[0].classList.remove('links');
   }
   if(currentItem != null && currentItem != undefined){
-    currentItem.style.color = "white";
-    currentItem.style.fontWeight = "bold";
+    currentItem.classList.add('links');
   }
  }
 </script>
