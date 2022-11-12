@@ -103,3 +103,7 @@ a[href^="#"]:hover {
     color: #FFFFFF;
     font-weight: bold;
 }
+
+.divider {
+    background-color: #DADADA;
+}

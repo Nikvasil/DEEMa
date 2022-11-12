@@ -1,16 +1,16 @@
 {% assign menu_items = "about_us,our_values,our_services,our_team,team_skills,contact_us" | split: ','  %}
-<nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-8 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: sticky; top: 0;">
+<nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-8 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: sticky; top: 0;">
         <div
           class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
         >
-          <a
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-gray-400"
-            href="/"
-            >DEEM</a
-          >
+          <div class="bg-white">
+            <a href="/" >
+              <img style="width: 100px;" src = "./assets/img/deemlogonew.svg" alt="DEEM"/>
+            </a>
+          </div>
         </div>
         <div
-          class="flex items-center bg-transparent"
+          class="flex items-center bg-transparent py-3 "
         >
           <ul id="menu" class="flex flex-row text-gray-deem">
             {% for post in menu_items %}
@@ -28,6 +28,7 @@
 <script>  
   window.onload = function() {
   /// add smoothing scroll animation
+  const tmp = document.querySelectorAll('a[href^="#"]');
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
