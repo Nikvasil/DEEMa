@@ -39,6 +39,18 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
 
 <script>
  window.onload = function() {
+  /// add smoothing scroll animation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+  /// highlight selected element on reload
   const pathBits = window.location.href.split('#');
   if(pathBits.length > 1 & pathBits[1] != "") {
     let element = document.querySelectorAll(`a[href='#${pathBits[1]}']`)[0];
@@ -49,6 +61,7 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
   }
  }
 
+ /// highlight and de-highlight elements on navigation
  function naviagation(currentItem){
   const list = document.getElementById("menu");
   for(let i = 0; i < list.children.length; i++){
