@@ -13,26 +13,49 @@ px-5 py-3 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: stic
         <div
           class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
         >
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center text-gray-deem px-2">
-              <a href="#about_us">About us</a>
+          <ul id="menu" class="flex flex-col lg:flex-row list-none lg:ml-auto text-gray-deem">
+            <li class="flex items-center px-2">
+              <a href="#about_us" onclick="naviagation(this)">About us</a>
             </li>
-            <li class="flex items-center text-gray-deem px-2">
-              <a href="#our_values">Our values</a>              
+            <li class="flex items-center px-2">
+              <a href="#our_values" onclick="naviagation(this)">Our values</a>              
             </li>
-            <li class="flex items-center text-gray-deem px-2">
-              <a href="#our_services">Our services</a>
+            <li class="flex items-center px-2">
+              <a href="#our_services" onclick="naviagation(this)">Our services</a>
             </li>
-            <li class="flex items-center text-gray-deem px-2">
-              <a href="#our_team">Our team</a>              
+            <li class="flex items-center px-2">
+              <a href="#our_team" onclick="naviagation(this)">Our team</a>              
             </li>
-            <li class="flex items-center text-gray-deem px-2">
-              <a href="#team_skills">Team skills</a>
+            <li class="flex items-center px-2">
+              <a href="#team_skills" onclick="naviagation(this)">Team skills</a>
             </li>
-            <li class="flex items-center text-gray-deem px-2">
-              <a href="#contact_us">Contact us</a>
+            <li class="flex items-center px-2">
+              <a href="#contact_us" onclick="naviagation(this)">Contact us</a>
             </li>
           </ul>
         </div>
   </div>
 </nav>
+
+<script>
+ window.onload = function() {
+  const pathBits = window.location.href.split('#');
+  if(pathBits.length > 1 & pathBits[1] != "") {
+    let element = document.querySelectorAll(`a[href='#${pathBits[1]}']`)[0];
+    if(element != null && element != undefined) {
+      element.style.color = "white";
+      element.style.fontWeight = "bold";
+    }
+  }
+ }
+
+ function naviagation(currentItem){
+  const list = document.getElementById("menu");
+  for(let i = 0; i < list.children.length; i++){
+    list.children[i].children[0].style.color = "inherit";
+    list.children[i].children[0].style.fontWeight = "inherit";
+  }
+  currentItem.style.color = "white";
+  currentItem.style.fontWeight = "bold";
+ }
+</script>
