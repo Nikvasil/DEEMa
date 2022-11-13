@@ -3,14 +3,44 @@
 
 {%- include head.html -%}
 
-<body class='h-full'>
+<body style="box-sizing: border-box;">
 
-  {%- include site_header.html -%}
+  {%- include menu_bar.html -%}
 
   {{ content }}
-
-  {%- include site_footer.html -%}
+  {%- include footer.html -%}
 
 </body>
+
+<script>
+  window.onscroll = function() {
+    let elements = document.querySelectorAll('div[name="block"]');
+    let closestElement = elements[0];
+    let distance = Math.abs(closestElement.getBoundingClientRect().top);
+    for(let i = 0; i < elements.length; i ++) {
+      const thisDistance = Math.abs(elements[i].getBoundingClientRect().top);
+      if(thisDistance < distance) {
+        distance = thisDistance;
+        closestElement = elements[i];
+      }
+    }
+
+    let menuElements = document.querySelectorAll(`a[href='#${closestElement.id}']`);
+    naviagation(menuElements[0]);
+    window.history.pushState({}, null, window.location.href.split('#')[0] + '#' + closestElement.id);
+  }
+
+
+ /// highlight and de-highlight elements on navigation
+ function naviagation(currentItem){
+  const list = document.getElementById("menu");
+  for(let i = 0; i < list.children.length; i++){
+    list.children[i].children[0].classList.remove('links');
+  }
+  if(currentItem != null && currentItem != undefined){
+    currentItem.classList.add('links');
+  }
+ }
+</script>
 
 </html>

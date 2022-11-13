@@ -1,14 +1,14 @@
 {
-  "name": "deema",
+  "name": "deem",
   "version": "1.0.0",
   "description": "Website of our Industrial Data Management project",
-  "homepage": "https://deema.vercel.app",
+  "homepage": "https://deem.vercel.app",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.19",
     "postcss-import": "14.0.0",
     "tailwindcss": "^3.0.15"
   },
