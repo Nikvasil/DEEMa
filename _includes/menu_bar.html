@@ -1,33 +1,52 @@
-<nav
-      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-gray-800"
-    >
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-      >
+{% assign menu_items = "about_us,our_values,our_services,our_team,team_skills,contact_us" | split: ','  %}
+<nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-8 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: sticky; top: 0;">
         <div
           class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
         >
-          <a
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            href="/"
-            >DEEMa</a
-          >
+          <div class="bg-white">
+            <a href="/" >
+              <img style="width: 100px;" src = "./assets/img/deemlogonew.svg" alt="DEEM"/>
+            </a>
+          </div>
         </div>
         <div
-          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+          class="flex items-center bg-transparent py-3 "
         >
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://github.com/Ovaday/DEEMa"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "
-                ></i
-                ><span class="lg:hidden inline-block ml-2">Star</span></a
-              >
+          <ul id="menu" class="flex flex-row text-gray-deem">
+            {% for post in menu_items %}
+              <li class="flex items-center px-2">
+                <a href="#{{post}}">{{post | replace: "_", " " | capitalize}}</a>
+              </li>
+            {% endfor %}
+            <li class="flex items-center px-2">
+              <img style="width: 30px;" src = "./assets/img/eye.svg" alt="DEEM"/>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+</nav>
+
+<script>  
+  window.onload = function() {
+  /// add smoothing scroll animation
+  const tmp = document.querySelectorAll('a[href^="#"]');
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+  /// highlight selected element on reload
+  const pathBits = window.location.href.split('#');
+  if(pathBits.length > 1 & pathBits[1] != "") {
+    let element = document.querySelectorAll(`a[href='#${pathBits[1]}']`)[0];
+    if(element != null && element != undefined) {
+      element.classList.add('links');
+    }
+  }
+ }
+
+</script>
