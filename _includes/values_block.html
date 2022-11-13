@@ -2,40 +2,56 @@
 .columnValues {
 	 /* flex: 33.33%;*/
       width:200px;
-	  height: 400px;
-	  padding: 15px;
-	  margin-bottom: 20px;
-   /* border: 1px solid lightgrey;
-    border-radius: 8px;*/
-
-	  /*background-color: #cccccc;*/
-
-	/*  text-align: center;*/
+	  /*height: 180px;*/
+    justify-content: center;
+	
 
 	}
-@media (min-width: 750px){
+@media (min-width: 1280px){
     .columnValues:nth-child(even){
-
     margin-top: 100px;
+
 }
 }
+@media (max-width: 1279px){
+ .columnValues{
+        margin-bottom: 30px;
+}
+
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px){
+    .columnValues:last-child{
+        margin-right: 671px;
+}
+}
+
+
 
 	.values {
 	   display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: -40px;
+
 	}
     .values p{
   color:lightslategrey;
     font-size: 1em;
+
         font-family: Garamond, serif;
 }
 .values h3{
   color: black;
-font-weight: bold;
+    font-weight: bold;
     font-family: Garamond, serif;
+   text-align: center;
     font-size: larger;
+
+}
+
+.values img{
+    margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
@@ -43,7 +59,7 @@ font-weight: bold;
 <section class="relative py-20 ">
   <div
           class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden mt-32 -mt-20"
-          style="height: 80px; transform: translateZ(0px);"
+          style="height: 80px; transform: translateZ(0px);margin-top:-200px;"
   >
     <svg
             class="absolute bottom-0 overflow-hidden"
@@ -67,63 +83,62 @@ font-weight: bold;
                <h2 class="text-4xl font-semibold text-black">Our Values</h2>
 
                 <p class="text-lg leading-relaxed m-4 text-gray-600">
-                    All people are different and that is what makes us unique and exceptional. We try our best every day and even more the day after.
+
+               Every company is based not only on knowledge and strategies but also on people and their beliefs.
                 </p>
 </div>
             </div>
     <div class="values">
                     <div class="columnValues" >
- <img src="./assets/img/love.png"style="width:200px; height:200px;margin-bottom:15px;border-radius: 50%;">
+ <img src="./assets/img/equality.svg"style="width:120px; height:120px;margin-bottom:15px;border-radius: 50%;">
                     <h3 float="left" color="black">Equality </h3>
 
                     <p float="left" color="light grey" >
-                       We strongly believe that all humans are created equal. We strive to create a company where everyone feels seen, heard and valued. It empowers us to innovate, build deeper connections with our customers, and become a better company.
+                    <!--We believe in everyone and value everyone.-->
+                        Everyone has an opportunity to be heard and valued.
                     </p>
 
                 </div>
-                <div class="columnValues" style="margin-left: 30px; margin-right: 30px;">
-                    <img src="./assets/img/conversation.png.png"style="width:200px; height:200px;margin-bottom: 15px;border-radius: 50%;">
+                <div class="columnValues" style="margin-left: 20px; margin-right: 20px;">
+                    <img src="./assets/img/communication.svg"style="width:120px; height:120px;margin-bottom: 15px;border-radius: 50%;">
                     <h3 float="left" color="black">Communication </h3>
 
                     <p float="left" color="light grey">
-                       We do our best to make our company a place where everyone can openly share their point of view and feel empowered to make difference. Our team makes everything possible.
-                    </p>
- <p float="left" color="light grey">
-     We highly value our customers. Interaction with the customers is what makes final products truly outstanding.
+                  Interaction is a tool to create and develop.
                     </p>
 
                 </div>
                  <div class="columnValues">
- <img src="./assets/img/design-thinking.png"style="width:200px; height:200px;margin-bottom: 15px;border-radius: 50%;">
+ <img src="./assets/img/creativity.svg"style="width:120px; height:120px;margin-bottom: 15px;border-radius: 50%;">
                     <h3 float="left" color="black">Creativity </h3>
 
-                    <p float="left" color="light grey">
-Innovation is what moves the world. It is an inspiration and uniqueness. It is what helps us to be exceeding.                    </p>
+                   <!-- <p class="mt-1 text-sm">-->
+<p float="left" color="light grey">
+Uniqueness, creativity and individuality drive innovations.
+                    </p>
 
                 </div>
-      <div class="columnValues" style="margin-left: 30px; margin-right: 30px;">
-                    <img src="./assets/img/shield.png"style="width:200px; height:200px;margin-bottom: 15px;border-radius: 50%;">
+      <div class="columnValues" style="margin-left: 20px; margin-right: 20px;">
+                    <img src="./assets/img/realiability.svg"style="width:120px; height:120px;margin-bottom: 15px;border-radius: 50%;">
                     <h3 float="left" color="black">Reliability </h3>
 
                     <p float="left" color="light grey">
-                        We believe consistency to deliver marvelous and reliable solutions is the key to building trust. We work hard to constantly improve.
+                        <!--We believe consistency to deliver reliable solutions is the key to building trust.-->
+                        Trust is a consistency of delivering reliable solutions.
                     </p>
 
 
                 </div>
       <div class="columnValues">
- <img src="./assets/img/agile.png"style="width:200px; height:200px;margin-bottom: 15px;border-radius: 50%;">
+ <img src="./assets/img/flexibility.svg"style="width:120px; height:120px;margin-bottom: 15px;border-radius: 50%;">
                     <h3 float="left" color="black">Flexibility </h3>
 
                     <p float="left" color="light grey">
-                       Our Team members have absolutely different and unique professinal background,
-                        so we could skillfully meet our customers’ needs.
-
+                       <!--We see changes and differences as not as complications, but as opportunities.-->
+Changes are not complications, but opportunities.
 
                     </p>
-  <p float="left" color="light grey">
-                        Our solutions are for customers and if the change is needed,  we’re prepared to work hard and make reasonable compromises in order to achieve the required result.
-                    </p>
+
                 </div>
 
 
