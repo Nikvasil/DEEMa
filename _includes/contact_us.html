@@ -4,10 +4,10 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10078.317550587408!2d12.9267572!3d50.8389544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a746124369d00d%3A0xde05efaa075f2103!2sChemnitz%20University%20of%20Technology!5e0!3m2!1sen!2sde!4v1668340284166!5m2!1sen!2sde" width="540" height="540" style="border-width:10px; border-radius: 0.375rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="w-1/2 px-14">
-            <div class="w-96" id="contact_us">
+            <div style="width: 540px; height: 540px" id="contact_us">
                 <form action="https://formsubmit.co/abdrazakowa@gmail.com"
                       method="post">
-                    <h3 class="text-3xl mb-2 font-semibold leading-normal text-center deem-topic"> Contact us </h3>
+                    <h3 class="pb-6 mb-2 font-semibold leading-normal text-center deem-topic"> Contact us </h3>
                     <div class="flex space-x-8 py-2 my-2">
                         <div class="w-1/2">
                             <input type="text"
@@ -22,13 +22,15 @@
                                    class="w-full text-xs px-2 h-10 outline-none rounded-md border focus:shadow-sm">
                         </div>
                     </div>
-                    <input type="text"
-                           name="subject"
-                           placeholder="Subject"
-                           class="w-full text-xs px-2 py-2 h-10 my-2 outline-none rounded-md border focus:shadow-sm"
-                           required>
+                    <div class="py-2">
+                        <input type="text"
+                               name="subject"
+                               placeholder="Subject"
+                               class="w-full text-xs px-2 h-10 my-2 outline-none rounded-md border focus:shadow-sm"
+                               required>
+                    </div>
                     <br>
-                    <textarea name="message" placeholder="Enter Your Message" class="w-full text-xs px-2 py-2 h-20 my-2 outline-none rounded-md border focus:shadow-sm resize-none" required></textarea>
+                    <textarea name="message" placeholder="Enter Your Message" class="w-full text-xs px-2 py-4 my-2 outline-none rounded-md border focus:shadow-sm resize-none" style="height: 10rem" required></textarea>
                     <br>
                     <div class="w-full text-center">
                         <button type="submit"
