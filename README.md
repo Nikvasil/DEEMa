@@ -1,4 +1,4 @@
-# Website of the team "DEEMa"
+# Website of the team "DEEM"
 Course Planspiel Web Engineering WS22/23
 
 ## NOTE: this is a project of students from TU Chemnitz, Germany 
@@ -13,7 +13,7 @@ How to run locally on Windows:
 4) Open WebStorm / Intellij Idea with the project.
 5) Navigate to docker-compose.yml file
 6) Near the "services" word on the left side there is a green arrow highlighted as "up". Click on it.
-7) On the bottom there is now sub-window opens with "Docker-compose: deema" and two sub-points: "build" and "site".
+7) On the bottom there is now sub-window opens with "Docker-compose: deem" and two sub-points: "build" and "site".
 8) Click first on **build** log, check if it launches and then click on **site** launch log.
 In case of successfull launch, the last lines of "site" should be like that:
 `Server address: http://0.0.0.0:4000//

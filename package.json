@@ -1,8 +1,8 @@
 {
-  "name": "deema",
+  "name": "deem",
   "version": "1.0.0",
   "description": "Website of our Industrial Data Management project",
-  "homepage": "https://deema.vercel.app",
+  "homepage": "https://deem.vercel.app",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.4.0",
