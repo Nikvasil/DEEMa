@@ -118,3 +118,50 @@ a[href^="#"]:hover {
 .divider {
     background-color: #DADADA;
 }
+
+.popup{
+    background-color: #DADADA;
+    width: 580px;
+    padding: 30px 40px;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 60%;
+    border-radius: 28px;
+    display: none;
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  -10px 0 0 auto;
+    background-color: transparent;
+    font-size: 25px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 16px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+.popup_buttons {
+    align-content: center;
+    font-size: 21px;
+    text-align: center;
+}
+.popup_buttons #close_accept {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #939292;
+}
+.popup_buttons #close_accept:hover {
+    color: #4e6a17;
+}
+.popup_buttons #close_no_cookies:hover {
+    color: #a37777;
+}
