@@ -1,0 +1,40 @@
+<nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-8 navbar-expand-lg shadow-md shadow-black bg-deem" style="position: sticky; top: 0;">
+    This website does not belong to a real company.
+    It is a Planspiel Web Engineering Project.
+</nav>
+
+<div class="popup">
+    <p>This website does not belong to a real company. It is a Planspiel Web Engineering Project.</p>
+    <p>Please agree to store in your cookies information about accepting this condition.</p>
+    <div class="popup_buttons">
+        <button id="close_accept">Accept</button>   <button id="close_no_cookies">Accept without cookies</button>
+    </div>
+</div>
+
+<script>
+    let cookies = document.cookie.split(';');
+
+    window.onload = function() {
+        const consents = cookies.find((row) => row.startsWith('accepted_conditions='));
+        let consentsValue = false;
+        if (consents) {
+            consentsValue = (consents.split('=')[1] === "true")
+        }
+        if (!consentsValue) {
+            setTimeout(
+                function open(event){
+                    document.querySelector(".popup").style.display = "block";
+                },
+                600
+            )
+        }
+    }
+    document.querySelector("#close_accept").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+        document.cookie = "accepted_conditions=true";
+    });
+    document.querySelector("#close_no_cookies").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+        document.cookie = "accepted_conditions=false;expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    });
+</script>
