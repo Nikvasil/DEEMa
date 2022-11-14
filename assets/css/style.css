@@ -110,7 +110,7 @@ a[href^="#"]:hover {
 
 .popup{
     background-color: #DADADA;
-    width: 570px;
+    width: 580px;
     padding: 30px 40px;
     position: fixed;
     z-index: 1000;
