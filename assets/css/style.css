@@ -390,6 +390,13 @@
     background-color: #2E2D2D;
 }
 
+.block-br {
+    text-align: center;
+    width: 25%;
+    background-color: #2d2d2d;
+    height: 8px;
+}
+
 .deem-topic {
     color: #2E2D2D;
     font-size: 3.00rem;
