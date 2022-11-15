@@ -391,10 +391,11 @@
 }
 
 .block-br {
-    text-align: center;
-    width: 25%;
+    padding: 100px;
+    width: 100px;
+    height: 45px;
+    position: relative;
     background-color: #2d2d2d;
-    height: 8px;
 }
 
 .deem-topic {
